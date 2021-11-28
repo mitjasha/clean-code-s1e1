@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.container {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -10,7 +10,7 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.header-img {
   width: 100%;
 }
 .header .more-inf {
