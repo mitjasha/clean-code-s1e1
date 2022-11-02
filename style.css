@@ -13,53 +13,55 @@
   text-align: right;
 }
 
-.header-img {
+.header__img {
   width: 100%;
 }
 
-.header .more-inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .header { text-align: center;
-}
+  .header { 
+    text-align: center;
+  }
 
 }
 
-.main-page-element {
+.page__main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.task-input,
+.item__task-label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  outline: none;
 }
 
-.task-wrapper {
+.section__wrap {
   display: flex;
 }
 
-.task-list {
+.section__list {
   margin: 0;
   padding: 0px;
 }
 
-.task-list-item, 
-.title {
+.list__item .section__title {
   list-style: none;
 }
 
-.input, 
-.button{
+.item__check-input{
   outline: none;
 }
 
 .button {
+  outline: none;
   background: none;
   border: 0px;
   color: #888;
@@ -75,8 +77,7 @@
 
 /* Heading */
 
-.title,
-.new-task-lable {
+.section__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -86,7 +87,7 @@
   text-transform: uppercase;
 }
 
-.new-task-input {
+.task-input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,50 +98,44 @@
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 226px;
 }
 
-.new-task-input:focus {
+.task-input:focus {
   color: #333;
 }
 
 /* New Task */
 
-.new-task-lable{
+.add-title{
   display: block;
   margin: 0 0 20px;
 }
 
-.new-task-input{
+#new-task .task-input{
   width: 318px;
 }
 
 /* Task list */
 
-.task-list-item {
+.list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.task-list-item > * {
   vertical-align: middle;
 }
 
-.task-list-item > .checkbox {
+.item__check-input {
   margin: 0 10px;
 }
 
-.task-list-item > .task-text {
+.item__task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
-}
-
-.task-list-item > .task-input {
   width: 226px;
 }
 
@@ -156,22 +151,22 @@
 
 /* Completed */
 
-.completed-tasks .task-text {
+#completed-tasks .item__task-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-.task-list-item .task-input {
+.list__item .task-input {
   display: none;
 }
 
-.task-list-item .edit-mode .task-input {
+.edit-mode .task-input {
   display: inline-block;
   width: 224px;
 }
 
-.task-list-item .edit-mode .task-text {
+.edit-mode .item__task-label {
   display: none;
 }
